@@ -90,7 +90,7 @@ public class TrackController {
         return new ResponseEntity<>(updatedTrack, HttpStatus.ACCEPTED);
     }
 
-    @GetMapping("track/search/{trackName}")
+    @GetMapping("tracks/{trackName}")
     public ResponseEntity<?> getTrackByName(@PathVariable String trackName) throws TrackNotFoundException {
 
         List<Track> retrieveTrackByNAme = trackService.getTrackByName(trackName);
